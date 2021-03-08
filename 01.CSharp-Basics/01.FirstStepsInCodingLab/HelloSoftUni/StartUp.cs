@@ -1,12 +1,12 @@
-﻿using System;
-
-namespace HelloSoftUni
+﻿namespace HelloSoftUni
 {
-    class Program
+    using System;
+
+    public class StartUp
     {
-        static void Main(string[] args)
+        public static void Main()
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Hello SoftUni");
         }
     }
 }
