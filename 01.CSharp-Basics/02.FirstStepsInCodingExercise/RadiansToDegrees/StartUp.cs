@@ -1,12 +1,14 @@
-﻿using System;
-
-namespace RadiansToDegrees
+﻿namespace RadiansToDegrees
 {
-    class Program
+    using System;
+
+    class StartUp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            double radians = double.Parse(Console.ReadLine() ?? throw new InvalidOperationException());
+            double degrees = radians * 180 / Math.PI;
+            Console.WriteLine(Math.Round(degrees));
         }
     }
 }
