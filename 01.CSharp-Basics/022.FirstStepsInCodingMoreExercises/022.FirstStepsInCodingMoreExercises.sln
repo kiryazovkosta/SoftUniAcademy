@@ -3,23 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30621.155
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrapezoidArea", "TrapezoidArea\TrapezoidArea.csproj", "{EFD0A4BA-C893-43F2-B0F4-622A8498690E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrapezoidArea", "TrapezoidArea\TrapezoidArea.csproj", "{EFD0A4BA-C893-43F2-B0F4-622A8498690E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TriangleArea", "TriangleArea\TriangleArea.csproj", "{BE85C753-4195-48BC-A48A-946E79AE4367}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TriangleArea", "TriangleArea\TriangleArea.csproj", "{BE85C753-4195-48BC-A48A-946E79AE4367}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CelsiusInFahrenheit", "CelsiusInFahrenheit\CelsiusInFahrenheit.csproj", "{25736757-B857-4988-9B8E-04D89FAA106F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CelsiusInFahrenheit", "CelsiusInFahrenheit\CelsiusInFahrenheit.csproj", "{25736757-B857-4988-9B8E-04D89FAA106F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VegetableMarket", "VegetableMarket\VegetableMarket.csproj", "{36ABA6F9-3B09-4826-ABF6-C09DE6ECD448}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VegetableMarket", "VegetableMarket\VegetableMarket.csproj", "{36ABA6F9-3B09-4826-ABF6-C09DE6ECD448}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainingLab", "TrainingLab\TrainingLab.csproj", "{DA9496C3-994C-41BE-8CD9-80A0DB7892D4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrainingLab", "TrainingLab\TrainingLab.csproj", "{DA9496C3-994C-41BE-8CD9-80A0DB7892D4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fishland", "Fishland\Fishland.csproj", "{87BBEC92-4B7F-403D-A6EB-E964F9D31027}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fishland", "Fishland\Fishland.csproj", "{87BBEC92-4B7F-403D-A6EB-E964F9D31027}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherForecast", "WeatherForecast\WeatherForecast.csproj", "{C2D612B1-F74E-471B-91A3-C809D5F980DC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeatherForecast", "WeatherForecast\WeatherForecast.csproj", "{C2D612B1-F74E-471B-91A3-C809D5F980DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherForecastPart2", "WeatherForecastPart2\WeatherForecastPart2.csproj", "{3BFE4FA3-6C0D-4E0F-A5DA-30A23DE53B83}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeatherForecastPart2", "WeatherForecastPart2\WeatherForecastPart2.csproj", "{3BFE4FA3-6C0D-4E0F-A5DA-30A23DE53B83}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CircleAreaAndPerimeter", "CircleAreaAndPerimeter\CircleAreaAndPerimeter.csproj", "{02E12343-A4AB-4605-BF0E-E35C8D559C07}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CircleAreaAndPerimeter", "CircleAreaAndPerimeter\CircleAreaAndPerimeter.csproj", "{02E12343-A4AB-4605-BF0E-E35C8D559C07}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HousePainting", "HousePainting\HousePainting.csproj", "{B112A1F6-D884-424E-AFE8-56B676C48AC8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{02E12343-A4AB-4605-BF0E-E35C8D559C07}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{02E12343-A4AB-4605-BF0E-E35C8D559C07}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{02E12343-A4AB-4605-BF0E-E35C8D559C07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B112A1F6-D884-424E-AFE8-56B676C48AC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B112A1F6-D884-424E-AFE8-56B676C48AC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B112A1F6-D884-424E-AFE8-56B676C48AC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B112A1F6-D884-424E-AFE8-56B676C48AC8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
