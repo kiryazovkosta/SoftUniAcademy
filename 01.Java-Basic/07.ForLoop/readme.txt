@@ -1,1 +1,2 @@
-https://judge.softuni.bg/Contests/Compete/Index/2393
+Lab - https://judge.softuni.bg/Contests/2393
+Exercise - https://judge.softuni.bg/Contests/2394
