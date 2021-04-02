@@ -1,10 +1,9 @@
-﻿using System;
-
-namespace Sequence2kPlus1
+﻿namespace Sequence2kPlus1
 {
-    class Program
+    using System;
+    public class StartUp
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             int number = int.Parse(Console.ReadLine());
             int n = 1;

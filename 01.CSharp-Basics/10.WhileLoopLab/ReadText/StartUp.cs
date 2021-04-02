@@ -1,10 +1,9 @@
-﻿using System;
-
-namespace ReadText
+﻿namespace ReadText
 {
-    class Program
+    using System;
+    public class StartUp
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             string input = Console.ReadLine();
             while (input != "Stop")

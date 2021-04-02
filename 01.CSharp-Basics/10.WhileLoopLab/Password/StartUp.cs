@@ -1,10 +1,9 @@
-﻿using System;
-
-namespace Password
+﻿namespace Password
 {
-    class Program
+    using System;
+    public class StartUp
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             string name = Console.ReadLine();
             string pass = Console.ReadLine();

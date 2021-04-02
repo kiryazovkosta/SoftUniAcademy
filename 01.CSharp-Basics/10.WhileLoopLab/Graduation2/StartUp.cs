@@ -1,10 +1,9 @@
-﻿using System;
-
-namespace Graduation2
+﻿namespace Graduation2
 {
-    class Program
+    using System;
+    public class StartUp
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             string name = Console.ReadLine();
             double totalGrades = 0;
@@ -14,7 +13,7 @@ namespace Graduation2
             while (cls < 12)
             {
                 double grade = double.Parse(Console.ReadLine());
-                if (grade <= 4.00)
+                if (grade < 4.00)
                 {
                     failedGrades++;
                 }

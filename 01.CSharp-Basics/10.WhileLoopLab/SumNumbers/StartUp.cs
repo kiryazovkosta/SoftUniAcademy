@@ -1,10 +1,9 @@
-﻿using System;
-
-namespace SumNumbers
+﻿namespace SumNumbers
 {
-    class Program
+    using System;
+    public class StartUp
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             int number = int.Parse(Console.ReadLine());
             int sum = 0;

@@ -1,10 +1,9 @@
-﻿using System;
-
-namespace AccountBalance
+﻿namespace AccountBalance
 {
-    class Program
+    using System;
+    public class StartUp
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             string input = Console.ReadLine();
             double sum = 0; 

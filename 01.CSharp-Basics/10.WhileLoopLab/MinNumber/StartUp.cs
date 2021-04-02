@@ -1,24 +1,23 @@
-﻿using System;
-
-namespace MaxNumber
+﻿namespace MinNumber
 {
-    class Program
+    using System;
+    public class StartUp
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            int max = Int32.MinValue;
+            int min = Int32.MaxValue;
             string input = Console.ReadLine();
             while (input != "Stop")
             {
                 int number = int.Parse(input);
-                if (number > max)
+                if (number < min)
                 {
-                    max = number;
+                    min = number;
                 }
                 input = Console.ReadLine();
             }
 
-            Console.WriteLine(max);
+            Console.WriteLine(min);
         }
     }
 }
