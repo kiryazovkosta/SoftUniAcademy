@@ -1,0 +1,1 @@
+https://judge.softuni.bg/Contests/1271/Data-Types-and-Variables-More-Exercise
