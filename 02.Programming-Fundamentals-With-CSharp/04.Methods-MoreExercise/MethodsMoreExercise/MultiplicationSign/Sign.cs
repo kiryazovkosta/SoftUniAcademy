@@ -1,16 +1,20 @@
-﻿using System;
-
-namespace MultiplicationSign
+﻿namespace MultiplicationSign
 {
-    class Program
+    #region Using
+
+    using System;
+
+    #endregion
+
+    public class Sign
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             int a = int.Parse(Console.ReadLine() ?? throw new ArgumentException(nameof(a)));
             int b = int.Parse(Console.ReadLine() ?? throw new ArgumentException(nameof(b)));
             int c = int.Parse(Console.ReadLine() ?? throw new ArgumentException(nameof(c)));
 
-            int result = GetSign(GetSign(a, b), c);
+            var result = GetSign(GetSign(a, b), c);
             Console.WriteLine(PrintSign(result));
         }
 
@@ -20,14 +24,13 @@ namespace MultiplicationSign
             {
                 return 0;
             }
-            else if ((a > 0 && b > 0) || (a < 0 && b < 0))
+
+            if ((a > 0 && b > 0) || (a < 0 && b < 0))
             {
                 return 1;
             }
-            else
-            {
-                return -1;
-            }
+
+            return -1;
         }
 
         private static string PrintSign(int number)
@@ -36,14 +39,13 @@ namespace MultiplicationSign
             {
                 return "positive";
             }
-            else if (number < 0)
+
+            if (number < 0)
             {
                 return "negative";
             }
-            else
-            {
-                return "zero";
-            }
+
+            return "zero";
         }
     }
 }

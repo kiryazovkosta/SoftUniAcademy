@@ -1,20 +1,23 @@
-﻿using System;
-
-namespace TribonacciSequence
+﻿namespace TribonacciSequence
 {
-    public class Program
-    {
-        static long[] records = new long[10000];
+    #region Using
 
-        static void Main(string[] args)
+    using System;
+
+    #endregion
+
+    public class Tribonacci
+    {
+        private static readonly long[] records = new long[10000];
+
+        private static void Main(string[] args)
         {
             int number = int.Parse(Console.ReadLine() ?? throw new ArgumentException(nameof(number)));
-            for (int i = 1; i <= number; i++)
+            for (var i = 1; i <= number; i++)
             {
-                long result = CalcTribonachi(i);
+                var result = CalcTribonachi(i);
                 Console.Write($"{result} ");
             }
-            
         }
 
         private static long CalcTribonachi(int number)
@@ -29,17 +32,16 @@ namespace TribonacciSequence
                 records[number] = 1;
                 return 1;
             }
-            else if (number == 3)
+
+            if (number == 3)
             {
                 records[number] = 2;
                 return 2;
             }
-            else
-            {
-                long result =  CalcTribonachi(number - 3) + CalcTribonachi(number - 2) + CalcTribonachi(number - 1);
-                records[number] = result;
-                return result;
-            }
+
+            var result = CalcTribonachi(number - 3) + CalcTribonachi(number - 2) + CalcTribonachi(number - 1);
+            records[number] = result;
+            return result;
         }
     }
 }
