@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31313.79
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messaging", "Messaging\Messaging.csproj", "{3234F42E-21D4-47BE-8CE1-BFF34878F210}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarRace", "CarRace\CarRace.csproj", "{FB0A6C8F-AA68-4C9A-9242-EDF5B30B3606}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TakeSkipRope", "TakeSkipRope\TakeSkipRope.csproj", "{7495D1D1-67A2-42A1-B06D-D0F9FF53D5BD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3234F42E-21D4-47BE-8CE1-BFF34878F210}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3234F42E-21D4-47BE-8CE1-BFF34878F210}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3234F42E-21D4-47BE-8CE1-BFF34878F210}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3234F42E-21D4-47BE-8CE1-BFF34878F210}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB0A6C8F-AA68-4C9A-9242-EDF5B30B3606}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB0A6C8F-AA68-4C9A-9242-EDF5B30B3606}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB0A6C8F-AA68-4C9A-9242-EDF5B30B3606}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB0A6C8F-AA68-4C9A-9242-EDF5B30B3606}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7495D1D1-67A2-42A1-B06D-D0F9FF53D5BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7495D1D1-67A2-42A1-B06D-D0F9FF53D5BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7495D1D1-67A2-42A1-B06D-D0F9FF53D5BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7495D1D1-67A2-42A1-B06D-D0F9FF53D5BD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EC2D3796-C589-4C58-ACEC-65B5E2D42368}
+	EndGlobalSection
+EndGlobal
