@@ -1,12 +1,24 @@
-﻿using System;
-
-namespace WordFilter
+﻿namespace WordFilter
 {
-    class Program
+    #region Using
+
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+
+    #endregion
+
+    internal class Filter
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            List<string> words = Console.ReadLine()
+                                     ?.Split(" ", StringSplitOptions.RemoveEmptyEntries)
+                                     .Where(w => w.Length % 2 == 0)
+                                     .ToList()
+                                 ??
+                                 new List<string>();
+            Console.WriteLine(string.Join(Environment.NewLine, words));
         }
     }
 }
