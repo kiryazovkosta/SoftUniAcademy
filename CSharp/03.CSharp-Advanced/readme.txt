@@ -1,0 +1,1 @@
+https://softuni.bg/trainings/3483/csharp-advanced-september-2021
