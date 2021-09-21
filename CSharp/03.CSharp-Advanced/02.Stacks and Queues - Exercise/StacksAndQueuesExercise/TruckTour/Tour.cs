@@ -8,35 +8,58 @@
     {
         private static void Main(string[] args)
         {
-            int count = int.Parse(Console.ReadLine());
-
-            Queue<int[]> pumps = new Queue<int[]>();
-            for (int i = 0; i < count; i++)
-            {
-                int[] data = Console.ReadLine()?.Split(" ", StringSplitOptions.RemoveEmptyEntries).Select(int.Parse)
-                    .ToArray();
-                pumps.Enqueue(data);
-            }
+            int countOfPumps = int.Parse(Console.ReadLine());
+            var original = new Queue<int>();
 
             int index = 0;
-            while (true)
+            for (int i = 0; i < countOfPumps; i++)
             {
-                int[] pumpData = pumps.Dequeue();
-                capacity += pumpData[0];
-                if (capacity < pumpData[1])
-                {
-                    capacity = 0;
-                    index++;
-                    pumps.Enqueue(pumpData);
-                }
-
-                if (pumps.Count == 0)
-                {
-                    break;
-                }
+                int[] input = Console.ReadLine().Split().Select(int.Parse).ToArray();
+                original.Enqueue(input[0]);
+                original.Enqueue(input[1]);
             }
 
-            Console.WriteLine(index);
+            while (true)
+            {
+                var copy = new Queue<int>(original);
+                long litres = copy.Dequeue();
+                long distance = copy.Dequeue();
+
+                if (litres < distance)
+                {
+                    original.Enqueue(original.Dequeue());
+                    original.Enqueue(original.Dequeue());
+                }
+                else if (litres >= distance)
+                {
+                    long leftFuel = litres - distance;
+
+                    while (copy.Any())
+                    {
+                        var litresInternal = copy.Dequeue();
+                        var distanceInternal = copy.Dequeue();
+
+                        if (litresInternal + leftFuel >= distanceInternal)
+                        {
+                            leftFuel = litresInternal + leftFuel - distanceInternal;
+                        }
+                        else
+                        {
+                            original.Enqueue(original.Dequeue());
+                            original.Enqueue(original.Dequeue());
+                            leftFuel = -1;
+                            break;
+                        }
+                    }
+
+                    if (leftFuel >= 0)
+                    {
+                        Console.WriteLine(index);
+                        break;
+                    }
+                }
+                index++;
+            }
         }
     }
 }

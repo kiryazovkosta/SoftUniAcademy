@@ -1,75 +1,55 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace BalancedParentheses
+﻿namespace BalancedParentheses
 {
-    class Program
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+
+    public class Balance
     {
         static void Main(string[] args)
         {
             string sequence = Console.ReadLine();
+            Stack<char> parenthesis = new Stack<char>();
+            Dictionary<char, char> brackets = new Dictionary<char, char>()
+            {
+                {'{', '}'},
+                {'(', ')'},
+                {'[', ']'}
+            };
 
-            Stack<char> first = new Stack<char>();
-            Queue<char> second = new Queue<char>();
+            bool isBalances = true;
 
             for (int i = 0; i < sequence.Length; i++)
             {
-                if (i < sequence.Length / 2)
+                char symbol = sequence[i];
+                if (brackets.ContainsKey(symbol))
                 {
-                    first.Push(sequence[i]);
+                    parenthesis.Push(symbol);
                 }
                 else
                 {
-                    second.Enqueue(sequence[i]);
-                }
-            }
-
-            if (first.Count != second.Count)
-            {
-                Console.WriteLine("NO");
-            }
-            else
-            {
-                bool areBalanced = true;
-                while (first.Count > 0)
-                {
-                    char open = first.Pop();
-                    char close = second.Dequeue();
-                    areBalanced = CheckBalance(open, close);
-                    if (areBalanced == false)
+                    if (parenthesis.Count == 0)
                     {
-                        break;
+                        isBalances = false;
+                    }
+                    else
+                    {
+                        char key = brackets.First(v => v.Value == symbol).Key;
+                        char bracket = parenthesis.Pop();
+                        if (key != bracket)
+                        {
+                            isBalances = false;
+                        }
                     }
                 }
 
-                if (areBalanced)
+                if (isBalances == false)
                 {
-                    Console.WriteLine("YES");
-                }
-                else
-                {
-                    Console.WriteLine("NO");
+                    break;
                 }
             }
-        }
 
-        private static bool CheckBalance(char open, char close)
-        {
-            bool areBalanced = false;
-            if (open == '(' && close == ')')
-            {
-                areBalanced = true;
-            }
-            else if (open == '[' && close == ']')
-            {
-                areBalanced = true;
-            }
-            else if (open == '{' && close == '}')
-            {
-                areBalanced = true;
-            }
-
-            return areBalanced;
+            Console.WriteLine(isBalances ? "YES" : "NO");
         }
     }
 }
