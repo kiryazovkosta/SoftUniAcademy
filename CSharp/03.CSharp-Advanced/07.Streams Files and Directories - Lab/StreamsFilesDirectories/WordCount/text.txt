@@ -1,0 +1,12 @@
+The first document in this series, RFC 1, was written in 1969. It was soon followed by others, including those that describe the core Internet Protocol (IP) still used in the Internet today. 
+The name "RFC" originally stood for ‘Request For Comments’ but now they are simply known as RFCs. Today, there are more than 9000 individually-numbered documents in the series.
+The RFC Series includes documents produced by the IETF, the Internet Architecture Board (IAB), the Internet Research Task Force (IRTF), and independent submitters.
+RFCs produced by the IETF cover many aspects of computer networking. They describe the Internet's technical foundations, such as addressing, routing, and transport technologies. 
+RFCs also specify protocols like TLS 1.3, QUIC, and WebRTC that are used to deliver services used by billions of people every day, such as real-time collaboration, email, and the domain name system. 
+Depending on their maturity level and what they cover, RFCs may have different statuses: Internet Standard, Proposed Standard, Best Current Practice, Experimental, Informational, and Historic
+RFCs usually begin as Internet-Drafts (I-Ds) written by an individual or a small group. In the IETF, these are then usually adopted by a working group, and improved and revised. 
+Less often, I-Ds are considered within the IETF as “individual submissions” sponsored by an Area Director. While not every I-D becomes an RFC, a well-defined set of processes (also documented in RFCs) guides the consideration and progression of a document. 
+When they are published, RFCs are freely available online. 
+Software developers, hardware manufacturers, and network operators around the world voluntarily implement and adopt the technical specifications described by RFCs.
+The IETF recognizes that security vulnerabilities will be discovered in IETF protocols and welcomes their critical evaluation by researchers. 
+The Internet Engineering Steering Group has provided guidance on how to report vulnerabilities believed to be discovered in IETF protocols.
