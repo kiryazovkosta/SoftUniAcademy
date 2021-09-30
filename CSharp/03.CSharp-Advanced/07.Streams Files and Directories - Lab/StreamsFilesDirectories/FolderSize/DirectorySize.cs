@@ -4,7 +4,7 @@ using System.Text;
 
 namespace FolderSize
 {
-    class Program
+    public class DirectorySize
     {
         static void Main(string[] args)
         {
