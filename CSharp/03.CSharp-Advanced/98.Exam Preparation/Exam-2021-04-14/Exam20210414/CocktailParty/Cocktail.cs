@@ -24,9 +24,13 @@ namespace CocktailParty
 
         public void Add(Ingredient ingredient)
         {
-            if (!this.Ingredients.Any(i => i.Name == ingredient.Name)
-                && this.Capacity > this.Ingredients.Count
-                && this.MaxAlcoholLevel >= ingredient.Alcohol + CurrentAlcoholLevel)
+            if (this.Ingredients.Any(i => i.Name == ingredient.Name))
+            {
+                return;
+            }
+
+            if (this.Capacity > this.Ingredients.Count
+                && this.MaxAlcoholLevel >= CurrentAlcoholLevel)
             {
                 this.Ingredients.Add(ingredient);
             }
@@ -57,7 +61,7 @@ namespace CocktailParty
         public string Report()
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine($"Cocktail: {this.Name}-Current Alcohol Level: {this.CurrentAlcoholLevel}");
+            sb.AppendLine($"Cocktail: {this.Name} - Current Alcohol Level: {this.CurrentAlcoholLevel}");
             foreach (var ingredient in this.Ingredients)
             {
                 sb.AppendLine(ingredient.ToString());
