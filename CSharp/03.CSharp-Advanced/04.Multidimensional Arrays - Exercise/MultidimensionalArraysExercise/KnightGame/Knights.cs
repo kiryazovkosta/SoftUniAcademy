@@ -2,11 +2,12 @@
 
 namespace KnightGame
 {
-    class Program
+    class Knights
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            int n = int.Parse(Console.ReadLine());
+            int[,] board = new int[n, n];
         }
     }
 }
