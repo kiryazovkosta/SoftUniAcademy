@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace Shapes
+﻿namespace Shapes
 {
+    using System;
+
     public abstract class Shape
     {
         public abstract double CalculatePerimeter();
@@ -9,7 +9,7 @@ namespace Shapes
 
         public virtual string Draw()
         {
-            return this.GetType().Name;
+            return "Drawing ";
         }
     }
 }
