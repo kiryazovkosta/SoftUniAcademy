@@ -1,0 +1,18 @@
+{
+  "name": "15.unit-testing-and-error-handling-lab",
+  "version": "1.0.0",
+  "description": "https://judge.softuni.org/Contests/Practice/Index/2766",
+  "main": "./src/*.js",
+  "scripts": {
+    "test": "mocha ./tests/"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "-": "^0.0.1",
+    "chai": "^4.3.6",
+    "g": "^2.0.1",
+    "mocha": "^9.2.0"
+  }
+}
