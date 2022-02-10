@@ -1,0 +1,16 @@
+{
+  "name": "16.unit-testing-and-error-handling-exercise",
+  "version": "1.0.0",
+  "description": "https://judge.softuni.org/Contests/2767",
+  "main": "./src/*.js",
+  "scripts": {
+    "test": "mocha ./tests/*.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.3.6",
+    "mocha": "^9.2.0"
+  }
+}
