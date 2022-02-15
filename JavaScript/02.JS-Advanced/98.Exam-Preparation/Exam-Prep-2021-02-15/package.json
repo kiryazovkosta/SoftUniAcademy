@@ -1,0 +1,16 @@
+{
+  "name": "Exam-Prep-2021-02-15",
+  "version": "1.0.0",
+  "description": "https://judge.softuni.org/Contests/Practice/Index/2861",
+  "main": "dealership.js",
+  "scripts": {
+    "test": "mocha *.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.3.6",
+    "mocha": "^9.2.0"
+  }
+}
