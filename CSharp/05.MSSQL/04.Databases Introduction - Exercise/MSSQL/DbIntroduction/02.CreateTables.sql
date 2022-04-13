@@ -1,0 +1,16 @@
+-- Problem 2. Create Tables
+USE Minions
+GO 
+
+CREATE TABLE Minions
+(
+	Id INT NOT NULL PRIMARY KEY,
+	Name NVARCHAR(256) NOT NULL,
+	Age INT NULL
+)
+
+CREATE TABLE Towns
+(
+	Id INT NOT NULL PRIMARY KEY,
+	[Name] NVARCHAR(256) NOT NULL
+)
