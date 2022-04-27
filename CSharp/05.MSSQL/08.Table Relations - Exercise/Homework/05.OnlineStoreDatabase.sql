@@ -1,0 +1,45 @@
+-- Problem 5.	Online Store Database
+--CREATE DATABASE OnlineStore
+--GO
+
+--USE OnlineStore
+--GO
+
+CREATE TABLE Cities (
+	CityID INT PRIMARY KEY,
+	[Name] VARCHAR(50) NOT NULL
+)
+
+CREATE TABLE Customers (
+	CustomerID INT PRIMARY KEY,
+	Name VARCHAR(50) NOT NULL,
+	Birthday DATE,
+	CityID INT,
+	CONSTRAINT FK_City FOREIGN KEY(CityID) REFERENCES Cities(CityID)
+)
+
+CREATE TABLE Orders (
+	OrderID INT PRIMARY KEY,
+	CustomerID INT
+	CONSTRAINT FK_Customer FOREIGN KEY(CustomerID) REFERENCES Customers(CustomerID)
+)
+
+CREATE TABLE ItemTypes (
+	ItemTypeID INT NOT NULL PRIMARY KEY IDENTITY,
+	[Name] VARCHAR(50) NOT NULL
+)
+
+CREATE TABLE Items (
+	ItemID INT PRIMARY KEY,
+	Name VARCHAR(50) NOT NULL,
+	ItemTypeID INT,
+	CONSTRAINT FK_ItemType FOREIGN KEY(ItemTypeID) REFERENCES ItemTypes(ItemTypeID)
+)
+
+CREATE TABLE OrderItems (
+	OrderID INT,
+	ItemID INT,
+	CONSTRAINT PK_Order_Item PRIMARY KEY(OrderID, ItemID),
+	CONSTRAINT FK_Order FOREIGN KEY(OrderID) REFERENCES Orders(OrderId),
+	CONSTRAINT FK_Item FOREIGN KEY(ItemID) REFERENCES Items(ItemID)
+)
