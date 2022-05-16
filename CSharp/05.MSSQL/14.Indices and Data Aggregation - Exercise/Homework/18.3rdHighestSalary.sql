@@ -1,0 +1,1 @@
+-- 18. *3rd Highest Salary
