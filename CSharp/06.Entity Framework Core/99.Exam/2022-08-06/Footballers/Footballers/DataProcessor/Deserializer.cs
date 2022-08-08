@@ -8,7 +8,9 @@
     using System.Linq;
     using System.Text;
     using System.Xml.Serialization;
+    using AutoMapper;
     using Data;
+    using Footballers.Common;
     using Footballers.Data.Models;
     using Footballers.Data.Models.Enums;
     using Footballers.DataProcessor.ImportDto;
@@ -38,7 +40,8 @@
                     continue;
                 }
 
-                var validCoach = new Coach() { Name = coach.Name, Nationality = coach.Nationality };
+                var validCoach = Mapper.Map<Coach>(coach);
+
                 foreach (var footballer in coach.Footballers)
                 {
                     if (!IsValid(footballer))
@@ -47,13 +50,8 @@
                         continue;
                     }
 
-                    if (!DateTime.TryParseExact(footballer.ContractStartDate, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime contractStartDate))
-                    {
-                        output.AppendLine(ErrorMessage);
-                        continue;
-                    }
-
-                    if (!DateTime.TryParseExact(footballer.ContractEndDate, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime contractEndDate))
+                    if (!DateTime.TryParseExact(footballer.ContractStartDate, GlobalConstants.FootballerDateFormat, CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime contractStartDate)
+                        || !DateTime.TryParseExact(footballer.ContractEndDate, GlobalConstants.FootballerDateFormat, CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime contractEndDate))
                     {
                         output.AppendLine(ErrorMessage);
                         continue;
@@ -65,14 +63,8 @@
                         continue;
                     }
 
-                    validCoach.Footballers.Add(new Footballer
-                    {
-                        Name = footballer.Name,
-                        ContractStartDate = contractStartDate,
-                        ContractEndDate = contractEndDate,
-                        BestSkillType = (BestSkillType) footballer.BestSkillType,
-                        PositionType = (PositionType) footballer.PositionType
-                    });
+                    var validFootballer = Mapper.Map<Footballer>(footballer);
+                    validCoach.Footballers.Add(validFootballer);
                 }
 
                 output.AppendLine(string.Format(SuccessfullyImportedCoach, validCoach.Name, validCoach.Footballers.Count));
@@ -103,7 +95,7 @@
                     continue;
                 }
 
-                var realTeam = new Team { Name = team.Name, Nationality = team.Nationality, Trophies = team.Trophies };
+                var realTeam = Mapper.Map<Team>(team);
 
                 foreach (var footballerId in team.Footballers.Distinct())
                 {
@@ -128,7 +120,7 @@
 
         private static bool IsValid(object dto)
         {
-            var validationContext = new ValidationContext(dto);
+            var validationContext = new System.ComponentModel.DataAnnotations.ValidationContext(dto);
             var validationResult = new List<ValidationResult>();
 
             return Validator.TryValidateObject(dto, validationContext, validationResult, true);

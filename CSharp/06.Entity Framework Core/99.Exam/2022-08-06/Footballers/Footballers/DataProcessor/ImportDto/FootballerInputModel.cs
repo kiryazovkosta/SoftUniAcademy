@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Footballers.Common;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
@@ -11,8 +12,8 @@ namespace Footballers.DataProcessor.ImportDto
     {
         [XmlElement("Name")]
         [Required]
-        [MinLength(2)]
-        [MaxLength(40)]
+        [MinLength(GlobalConstants.FootballerNameMinLength)]
+        [MaxLength(GlobalConstants.FootballerNameMaxLength)]
         public string Name { get; set; }
 
         [XmlElement("ContractStartDate")]
@@ -25,12 +26,12 @@ namespace Footballers.DataProcessor.ImportDto
 
         [XmlElement("PositionType")]
         [Required]
-        [Range(0, 3)]
+        [Range(GlobalConstants.FootballerPositionTypeMinValue, GlobalConstants.FootballerPositionTypeMaxValue)]
         public int PositionType { get; set; }
 
         [XmlElement("BestSkillType")]
         [Required]
-        [Range(0, 4)]
+        [Range(GlobalConstants.FootballerBestSkillTypeTypeMinValue, GlobalConstants.FootballerBestSkillTypeTypeMaxValue)]
         public int BestSkillType { get; set; }
     }
 }

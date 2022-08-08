@@ -1,25 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Text;
-using System.Xml.Serialization;
-
-namespace Footballers.DataProcessor.ImportDto
+﻿namespace Footballers.DataProcessor.ImportDto
 {
-    [XmlType("Coach")]
+    using Footballers.Common;
+    using System.ComponentModel.DataAnnotations;
+    using System.Xml.Serialization;
+
+    [XmlType(GlobalConstants.CoachXmlType)]
     public class CoachInputModel
     {
-        [XmlElement("Name")]
+        [XmlElement(GlobalConstants.CoachXmlEmlementName)]
         [Required]
-        [MinLength(2)]
-        [MaxLength(40)]
+        [MinLength(GlobalConstants.CoachNameMinLength)]
+        [MaxLength(GlobalConstants.CoachNameMaxLength)]
         public string Name { get; set; }
 
-        [XmlElement("Nationality")]
+        [XmlElement(GlobalConstants.CoachXmlEmlementNationality)]
         [Required]
         public string Nationality { get; set; }
 
-        [XmlArray("Footballers")]
+        [XmlArray(GlobalConstants.CoachXmlArrayFootballers)]
         public FootballerInputModel[] Footballers { get; set; }
     }
 }
